@@ -3,7 +3,7 @@
 TransEPI is a Transformer-based model for EPI prediction. 
 This repository contains the scripts, data, and trained models for TransEPI.
 
-![TransEPI](./figures/Figure1.pdf)
+![TransEPI](./figures/Figure1.svg)
 
 # Requirements
 
