@@ -11,36 +11,24 @@ This repository contains the scripts, data, and trained models for TransEPI.
 * scikit-learn
 * PyTorch>=1.6.0
 
-# Data preparation
+# Preparing genomic features
 
-## Genomic data
-    - CTCF data in narrowPeak  
-    - DNase-seq data in bigWig (p-value track)
-    - H3K27ac ChIP-seq data in bigWig (p-value track)
-    - H3K4me3 ChIP-seq data in bigWig (p-value track)
-    - H3K4me1 ChIP-seq data in bigWig (p-value track)
-The users should edit the json files in `config/` to specify the location of these genomic data.
+## Genomic data  
+Edit the following feature data configuration files in json format:  
+- CTCF narrowPeak configuration file: `./data/genomic_data/bed/CTCF_bed.json`  
+- bigWig configuration file: `./data/genomic_data/bigwig/bw_6histone.json`  
+- Prepared features (500bp)`./data/genomic_data/CTCF_DNase_6histone.500.json`  
+- Prepared features (1000bp)`./data/genomic_data/CTCF_DNase_6histone.1000.json`  
 
 
 # Usage
 
 ```bash
-./run_deepepi.sh /path/to/query/file /path/to/output/directory
+./TransEPI_EPI.sh /path/to/query_dataset /path/to/output_directory
+./TransEPI_target.sh /path/to/query_dataset /path/to/output_directory
 ```
 
 ## Input
-
-The input file should be formatted as:
-
-```
-##CELLTYPE [cell type]
-##BUILDVER [build version]
-#chrom enhancer promoter
-chr10	49875920-49876712	50396056-50398056
-chr10	49874816-49877816	49874816-49877816
-```
-
-build version: GRCh37/hg19/GRCh38/hg38
 
 
 ## Output
@@ -49,15 +37,20 @@ The output will be saved at `/path/to/output/directory/results.txt`
 ## Demo
 
 ```bash
-./run_deepepi.sh demo/demo_data.tsv output/demo
+./TransEPI_EPI.sh demo/EPI_demo_data.tsv output/EPI_demo
+./Transtarget_target.sh demo/target_demo_data.tsv output/target_demo
 ```
 
 ## model
-The model `model/GM12878_IMR90_K562_NHEK_chr1_19.json` was trained on samples from GM12878, IMR90, K562, and NHEK. Only the pairs on chr1-chr19 were used.
 
 # Datasets
 
-All the datasets used in this study are available at `data/dataset`
+All the datasets used in this study are available at `data/BENGI` and `data/HiC-loops`
+
+# Baseline models and features   
+
+- TargetFinder: `./comparison/TargetFinder`  
+- 3DPredictor: `./comparison/3DPredictor`  
 
 
 # Questions
