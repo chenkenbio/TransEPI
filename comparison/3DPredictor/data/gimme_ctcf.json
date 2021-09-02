@@ -1,0 +1,49 @@
+{
+    "_location": "/data2/users/chenken/Documents/EPIGL/data/gimme",
+    "selected": ["CTCF"],
+    "type": "bigbed",
+    "celltypes": {
+        "A549": {
+            "CTCF": "A549_stranded_CTCF.narrowPeak.bigBed"
+        },
+        "GM12878": {
+            "CTCF": "GM12878_stranded_CTCF.narrowPeak.bigBed"
+        },
+        "HeLa-S3": {
+            "CTCF": "HeLa-S3_stranded_CTCF.narrowPeak.bigBed"
+        },
+        "HepG2": {
+            "CTCF": "HepG2_stranded_CTCF.narrowPeak.bigBed"
+        },
+        "HMEC": {
+            "CTCF": "HMEC_stranded_CTCF.narrowPeak.bigBed"
+        },
+        "HUVEC": {
+            "CTCF": "HUVEC_stranded_CTCF.narrowPeak.bigBed"
+        },
+        "IMR90": {
+            "CTCF": "IMR90_stranded_CTCF.narrowPeak.bigBed"
+        },
+        "K562": {
+            "CTCF": "K562_stranded_CTCF.narrowPeak.bigBed"
+        },
+        "Liver": {
+            "CTCF": "Liver_stranded_CTCF.narrowPeak.bigBed"
+        },
+        "NHEK": {
+            "CTCF": "NHEK_stranded_CTCF.narrowPeak.bigBed"
+        },
+        "Ovary": {
+            "CTCF": "Ovary_stranded_CTCF.narrowPeak.bigBed"
+        },
+        "Pancreas": {
+            "CTCF": "Pancreas_stranded_CTCF.narrowPeak.bigBed"
+        },
+        "SigmoidColon": {
+            "CTCF": "SigmoidColon_stranded_CTCF.narrowPeak.bigBed"
+        },
+        "Stomach": {
+            "CTCF": "Stomach_stranded_CTCF.narrowPeak.bigBed"
+        }
+    }
+}

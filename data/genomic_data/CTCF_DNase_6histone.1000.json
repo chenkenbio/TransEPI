@@ -1,0 +1,152 @@
+{
+    "H1": {
+        "CTCF": "/home/chenken/Documents/DeepEPI/data/genomic_features/narrowPeak_H1_CTCF.1000bp.pt",
+        "DNase": "/home/chenken/Documents/DeepEPI/data/genomic_features/bigWig_H1_DNase.1000bp.pt",
+        "H3K27ac": "/home/chenken/Documents/DeepEPI/data/genomic_features/bigWig_H1_H3K27ac.1000bp.pt",
+        "H3K27me3": "/home/chenken/Documents/DeepEPI/data/genomic_features/bigWig_H1_H3K27me3.1000bp.pt",
+        "H3K36me3": "/home/chenken/Documents/DeepEPI/data/genomic_features/bigWig_H1_H3K36me3.1000bp.pt",
+        "H3K4me1": "/home/chenken/Documents/DeepEPI/data/genomic_features/bigWig_H1_H3K4me1.1000bp.pt",
+        "H3K4me3": "/home/chenken/Documents/DeepEPI/data/genomic_features/bigWig_H1_H3K4me3.1000bp.pt",
+        "H3K9me3": "/home/chenken/Documents/DeepEPI/data/genomic_features/bigWig_H1_H3K9me3.1000bp.pt"
+    },
+    "GM12878": {
+        "CTCF": "/home/chenken/Documents/DeepEPI/data/genomic_features/narrowPeak_GM12878_CTCF.1000bp.pt",
+        "DNase": "/home/chenken/Documents/DeepEPI/data/genomic_features/bigWig_GM12878_DNase.1000bp.pt",
+        "H3K27ac": "/home/chenken/Documents/DeepEPI/data/genomic_features/bigWig_GM12878_H3K27ac.1000bp.pt",
+        "H3K27me3": "/home/chenken/Documents/DeepEPI/data/genomic_features/bigWig_GM12878_H3K27me3.1000bp.pt",
+        "H3K36me3": "/home/chenken/Documents/DeepEPI/data/genomic_features/bigWig_GM12878_H3K36me3.1000bp.pt",
+        "H3K4me1": "/home/chenken/Documents/DeepEPI/data/genomic_features/bigWig_GM12878_H3K4me1.1000bp.pt",
+        "H3K4me3": "/home/chenken/Documents/DeepEPI/data/genomic_features/bigWig_GM12878_H3K4me3.1000bp.pt",
+        "H3K9me3": "/home/chenken/Documents/DeepEPI/data/genomic_features/bigWig_GM12878_H3K9me3.1000bp.pt"
+    },
+    "HeLa": {
+        "CTCF": "/home/chenken/Documents/DeepEPI/data/genomic_features/narrowPeak_HeLa_CTCF.1000bp.pt",
+        "DNase": "/home/chenken/Documents/DeepEPI/data/genomic_features/bigWig_HeLa-S3_DNase.1000bp.pt",
+        "H3K27ac": "/home/chenken/Documents/DeepEPI/data/genomic_features/bigWig_HeLa-S3_H3K27ac.1000bp.pt",
+        "H3K27me3": "/home/chenken/Documents/DeepEPI/data/genomic_features/bigWig_HeLa-S3_H3K27me3.1000bp.pt",
+        "H3K36me3": "/home/chenken/Documents/DeepEPI/data/genomic_features/bigWig_HeLa-S3_H3K36me3.1000bp.pt",
+        "H3K4me1": "/home/chenken/Documents/DeepEPI/data/genomic_features/bigWig_HeLa-S3_H3K4me1.1000bp.pt",
+        "H3K4me3": "/home/chenken/Documents/DeepEPI/data/genomic_features/bigWig_HeLa-S3_H3K4me3.1000bp.pt",
+        "H3K9me3": "/home/chenken/Documents/DeepEPI/data/genomic_features/bigWig_HeLa-S3_H3K9me3.1000bp.pt"
+    },
+    "IMR90": {
+        "CTCF": "/home/chenken/Documents/DeepEPI/data/genomic_features/narrowPeak_IMR90_CTCF.1000bp.pt",
+        "DNase": "/home/chenken/Documents/DeepEPI/data/genomic_features/bigWig_IMR90_DNase.1000bp.pt",
+        "H3K27ac": "/home/chenken/Documents/DeepEPI/data/genomic_features/bigWig_IMR90_H3K27ac.1000bp.pt",
+        "H3K27me3": "/home/chenken/Documents/DeepEPI/data/genomic_features/bigWig_IMR90_H3K27me3.1000bp.pt",
+        "H3K36me3": "/home/chenken/Documents/DeepEPI/data/genomic_features/bigWig_IMR90_H3K36me3.1000bp.pt",
+        "H3K4me1": "/home/chenken/Documents/DeepEPI/data/genomic_features/bigWig_IMR90_H3K4me1.1000bp.pt",
+        "H3K4me3": "/home/chenken/Documents/DeepEPI/data/genomic_features/bigWig_IMR90_H3K4me3.1000bp.pt",
+        "H3K9me3": "/home/chenken/Documents/DeepEPI/data/genomic_features/bigWig_IMR90_H3K9me3.1000bp.pt"
+    },
+    "K562": {
+        "CTCF": "/home/chenken/Documents/DeepEPI/data/genomic_features/narrowPeak_K562_CTCF.1000bp.pt",
+        "DNase": "/home/chenken/Documents/DeepEPI/data/genomic_features/bigWig_K562_DNase.1000bp.pt",
+        "H3K27ac": "/home/chenken/Documents/DeepEPI/data/genomic_features/bigWig_K562_H3K27ac.1000bp.pt",
+        "H3K27me3": "/home/chenken/Documents/DeepEPI/data/genomic_features/bigWig_K562_H3K27me3.1000bp.pt",
+        "H3K36me3": "/home/chenken/Documents/DeepEPI/data/genomic_features/bigWig_K562_H3K36me3.1000bp.pt",
+        "H3K4me1": "/home/chenken/Documents/DeepEPI/data/genomic_features/bigWig_K562_H3K4me1.1000bp.pt",
+        "H3K4me3": "/home/chenken/Documents/DeepEPI/data/genomic_features/bigWig_K562_H3K4me3.1000bp.pt",
+        "H3K9me3": "/home/chenken/Documents/DeepEPI/data/genomic_features/bigWig_K562_H3K9me3.1000bp.pt"
+    },
+    "HMEC": {
+        "CTCF": "/home/chenken/Documents/DeepEPI/data/genomic_features/narrowPeak_HMEC_CTCF.1000bp.pt",
+        "DNase": "/home/chenken/Documents/DeepEPI/data/genomic_features/bigWig_HMEC_DNase.1000bp.pt",
+        "H3K27ac": "/home/chenken/Documents/DeepEPI/data/genomic_features/bigWig_HMEC_H3K27ac.1000bp.pt",
+        "H3K27me3": "/home/chenken/Documents/DeepEPI/data/genomic_features/bigWig_HMEC_H3K27me3.1000bp.pt",
+        "H3K36me3": "/home/chenken/Documents/DeepEPI/data/genomic_features/bigWig_HMEC_H3K36me3.1000bp.pt",
+        "H3K4me1": "/home/chenken/Documents/DeepEPI/data/genomic_features/bigWig_HMEC_H3K4me1.1000bp.pt",
+        "H3K4me3": "/home/chenken/Documents/DeepEPI/data/genomic_features/bigWig_HMEC_H3K4me3.1000bp.pt",
+        "H3K9me3": "/home/chenken/Documents/DeepEPI/data/genomic_features/bigWig_HMEC_H3K9me3.1000bp.pt"
+    },
+    "HUVEC": {
+        "CTCF": "/home/chenken/Documents/DeepEPI/data/genomic_features/narrowPeak_HUVEC_CTCF.1000bp.pt",
+        "DNase": "/home/chenken/Documents/DeepEPI/data/genomic_features/bigWig_HUVEC_DNase.1000bp.pt",
+        "H3K27ac": "/home/chenken/Documents/DeepEPI/data/genomic_features/bigWig_HUVEC_H3K27ac.1000bp.pt",
+        "H3K27me3": "/home/chenken/Documents/DeepEPI/data/genomic_features/bigWig_HUVEC_H3K27me3.1000bp.pt",
+        "H3K36me3": "/home/chenken/Documents/DeepEPI/data/genomic_features/bigWig_HUVEC_H3K36me3.1000bp.pt",
+        "H3K4me1": "/home/chenken/Documents/DeepEPI/data/genomic_features/bigWig_HUVEC_H3K4me1.1000bp.pt",
+        "H3K4me3": "/home/chenken/Documents/DeepEPI/data/genomic_features/bigWig_HUVEC_H3K4me3.1000bp.pt",
+        "H3K9me3": "/home/chenken/Documents/DeepEPI/data/genomic_features/bigWig_HUVEC_H3K9me3.1000bp.pt"
+    },
+    "NHEK": {
+        "CTCF": "/home/chenken/Documents/DeepEPI/data/genomic_features/narrowPeak_NHEK_CTCF.1000bp.pt",
+        "DNase": "/home/chenken/Documents/DeepEPI/data/genomic_features/bigWig_NHEK_DNase.1000bp.pt",
+        "H3K27ac": "/home/chenken/Documents/DeepEPI/data/genomic_features/bigWig_NHEK_H3K27ac.1000bp.pt",
+        "H3K27me3": "/home/chenken/Documents/DeepEPI/data/genomic_features/bigWig_NHEK_H3K27me3.1000bp.pt",
+        "H3K36me3": "/home/chenken/Documents/DeepEPI/data/genomic_features/bigWig_NHEK_H3K36me3.1000bp.pt",
+        "H3K4me1": "/home/chenken/Documents/DeepEPI/data/genomic_features/bigWig_NHEK_H3K4me1.1000bp.pt",
+        "H3K4me3": "/home/chenken/Documents/DeepEPI/data/genomic_features/bigWig_NHEK_H3K4me3.1000bp.pt",
+        "H3K9me3": "/home/chenken/Documents/DeepEPI/data/genomic_features/bigWig_NHEK_H3K9me3.1000bp.pt"
+    },
+    "Fetal_Female_Brain": {
+        "CTCF":     "/home/chenken/Documents/DeepEPI/data/genomic_features/narrowPeak_neural_cell_H1_CTCF.1000bp.pt",
+        "DNase":    "/home/chenken/Documents/DeepEPI/data/genomic_features/bigWig_fetal_female_brain_DNase.1000bp.pt",
+        "H3K27ac":  "/home/chenken/Documents/DeepEPI/data/genomic_features/bigWig_fetal_female_brain_H3K27ac.1000bp.pt",
+        "H3K27me3": "/home/chenken/Documents/DeepEPI/data/genomic_features/bigWig_fetal_female_brain_H3K27me3.1000bp.pt",
+        "H3K36me3": "/home/chenken/Documents/DeepEPI/data/genomic_features/bigWig_fetal_female_brain_H3K36me3.1000bp.pt",
+        "H3K4me1":  "/home/chenken/Documents/DeepEPI/data/genomic_features/bigWig_fetal_female_brain_H3K4me1.1000bp.pt",
+        "H3K4me3":  "/home/chenken/Documents/DeepEPI/data/genomic_features/bigWig_fetal_female_brain_H3K4me3.1000bp.pt",
+        "H3K9me3":  "/home/chenken/Documents/DeepEPI/data/genomic_features/bigWig_fetal_female_brain_H3K9me3.1000bp.pt"
+    },
+    "Fetal_Male_Brain": {
+        "CTCF":     "/home/chenken/Documents/DeepEPI/data/genomic_features/narrowPeak_neural_cell_H1_CTCF.1000bp.pt",
+        "DNase":    "/home/chenken/Documents/DeepEPI/data/genomic_features/bigWig_fetal_male_brain_DNase.1000bp.pt",
+        "H3K27ac":  "/home/chenken/Documents/DeepEPI/data/genomic_features/bigWig_fetal_male_brain_H3K27ac.1000bp.pt",
+        "H3K27me3": "/home/chenken/Documents/DeepEPI/data/genomic_features/bigWig_fetal_male_brain_H3K27me3.1000bp.pt",
+        "H3K36me3": "/home/chenken/Documents/DeepEPI/data/genomic_features/bigWig_fetal_male_brain_H3K36me3.1000bp.pt",
+        "H3K4me1":  "/home/chenken/Documents/DeepEPI/data/genomic_features/bigWig_fetal_male_brain_H3K4me1.1000bp.pt",
+        "H3K4me3":  "/home/chenken/Documents/DeepEPI/data/genomic_features/bigWig_fetal_male_brain_H3K4me3.1000bp.pt",
+        "H3K9me3":  "/home/chenken/Documents/DeepEPI/data/genomic_features/bigWig_fetal_male_brain_H3K9me3.1000bp.pt"
+    },
+    "brain_30d": {
+        "CTCF":     "/home/chenken/Documents/DeepEPI/data/genomic_features/narrowPeak_brain_30d_CTCF.1000bp.pt",
+        "DNase":    "/home/chenken/Documents/DeepEPI/data/genomic_features/bigWig_fetal_female_brain_DNase.1000bp.pt",
+        "H3K27ac":  "/home/chenken/Documents/DeepEPI/data/genomic_features/bigWig_fetal_female_brain_H3K27ac.1000bp.pt",
+        "H3K27me3": "/home/chenken/Documents/DeepEPI/data/genomic_features/bigWig_fetal_female_brain_H3K27me3.1000bp.pt",
+        "H3K36me3": "/home/chenken/Documents/DeepEPI/data/genomic_features/bigWig_fetal_female_brain_H3K36me3.1000bp.pt",
+        "H3K4me1":  "/home/chenken/Documents/DeepEPI/data/genomic_features/bigWig_fetal_female_brain_H3K4me1.1000bp.pt",
+        "H3K4me3":  "/home/chenken/Documents/DeepEPI/data/genomic_features/bigWig_fetal_female_brain_H3K4me3.1000bp.pt",
+        "H3K9me3":  "/home/chenken/Documents/DeepEPI/data/genomic_features/bigWig_fetal_female_brain_H3K9me3.1000bp.pt"
+    },
+    "brain_90d": {
+        "CTCF":     "/home/chenken/Documents/DeepEPI/data/genomic_features/narrowPeak_brain_90d_CTCF.1000bp.pt",
+        "DNase":    "/home/chenken/Documents/DeepEPI/data/genomic_features/bigWig_fetal_female_brain_DNase.1000bp.pt",
+        "H3K27ac":  "/home/chenken/Documents/DeepEPI/data/genomic_features/bigWig_fetal_female_brain_H3K27ac.1000bp.pt",
+        "H3K27me3": "/home/chenken/Documents/DeepEPI/data/genomic_features/bigWig_fetal_female_brain_H3K27me3.1000bp.pt",
+        "H3K36me3": "/home/chenken/Documents/DeepEPI/data/genomic_features/bigWig_fetal_female_brain_H3K36me3.1000bp.pt",
+        "H3K4me1":  "/home/chenken/Documents/DeepEPI/data/genomic_features/bigWig_fetal_female_brain_H3K4me1.1000bp.pt",
+        "H3K4me3":  "/home/chenken/Documents/DeepEPI/data/genomic_features/bigWig_fetal_female_brain_H3K4me3.1000bp.pt",
+        "H3K9me3":  "/home/chenken/Documents/DeepEPI/data/genomic_features/bigWig_fetal_female_brain_H3K9me3.1000bp.pt"
+    },
+    "brain_180d": {
+        "CTCF":     "/home/chenken/Documents/DeepEPI/data/genomic_features/narrowPeak_brain_180d_CTCF.1000bp.pt",
+        "DNase":    "/home/chenken/Documents/DeepEPI/data/genomic_features/bigWig_fetal_female_brain_DNase.1000bp.pt",
+        "H3K27ac":  "/home/chenken/Documents/DeepEPI/data/genomic_features/bigWig_fetal_female_brain_H3K27ac.1000bp.pt",
+        "H3K27me3": "/home/chenken/Documents/DeepEPI/data/genomic_features/bigWig_fetal_female_brain_H3K27me3.1000bp.pt",
+        "H3K36me3": "/home/chenken/Documents/DeepEPI/data/genomic_features/bigWig_fetal_female_brain_H3K36me3.1000bp.pt",
+        "H3K4me1":  "/home/chenken/Documents/DeepEPI/data/genomic_features/bigWig_fetal_female_brain_H3K4me1.1000bp.pt",
+        "H3K4me3":  "/home/chenken/Documents/DeepEPI/data/genomic_features/bigWig_fetal_female_brain_H3K4me3.1000bp.pt",
+        "H3K9me3":  "/home/chenken/Documents/DeepEPI/data/genomic_features/bigWig_fetal_female_brain_H3K9me3.1000bp.pt"
+    },
+    "H9NPC": {
+        "CTCF":     "/home/chenken/Documents/DeepEPI/data/genomic_features/narrowPeak_neural_progenitor_cell_H9_CTCF.1000bp.pt",
+        "DNase":    "/home/chenken/Documents/DeepEPI/data/genomic_features/bigWig_H9NPC_DNase.1000bp.pt",
+        "H3K27ac":  "/home/chenken/Documents/DeepEPI/data/genomic_features/bigWig_H9NPC_H3K27ac.1000bp.pt",
+        "H3K27me3": "/home/chenken/Documents/DeepEPI/data/genomic_features/bigWig_H9NPC_H3K27me3.1000bp.pt",
+        "H3K36me3": "/home/chenken/Documents/DeepEPI/data/genomic_features/bigWig_H9NPC_H3K36me3.1000bp.pt",
+        "H3K4me1":  "/home/chenken/Documents/DeepEPI/data/genomic_features/bigWig_H9NPC_H3K4me1.1000bp.pt",
+        "H3K4me3":  "/home/chenken/Documents/DeepEPI/data/genomic_features/bigWig_H9NPC_H3K4me3.1000bp.pt",
+        "H3K9me3":  "/home/chenken/Documents/DeepEPI/data/genomic_features/bigWig_H9NPC_H3K9me3.1000bp.pt"
+    },
+    "H1NPC": {
+        "CTCF":     "/home/chenken/Documents/DeepEPI/data/genomic_features/narrowPeak_neural_progenitor_cell_H1_CTCF.1000bp.pt",
+        "DNase":    "/home/chenken/Documents/DeepEPI/data/genomic_features/bigWig_H1NPC_DNase.1000bp.pt",
+        "H3K27ac":  "/home/chenken/Documents/DeepEPI/data/genomic_features/bigWig_H1NPC_H3K27ac.1000bp.pt",
+        "H3K27me3": "/home/chenken/Documents/DeepEPI/data/genomic_features/bigWig_H1NPC_H3K27me3.1000bp.pt",
+        "H3K36me3": "/home/chenken/Documents/DeepEPI/data/genomic_features/bigWig_H1NPC_H3K36me3.1000bp.pt",
+        "H3K4me1":  "/home/chenken/Documents/DeepEPI/data/genomic_features/bigWig_H1NPC_H3K4me1.1000bp.pt",
+        "H3K4me3":  "/home/chenken/Documents/DeepEPI/data/genomic_features/bigWig_H1NPC_H3K4me3.1000bp.pt",
+        "H3K9me3":  "/home/chenken/Documents/DeepEPI/data/genomic_features/bigWig_H1NPC_H3K9me3.1000bp.pt"
+    }
+}

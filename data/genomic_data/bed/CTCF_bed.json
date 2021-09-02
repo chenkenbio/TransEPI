@@ -1,0 +1,68 @@
+{
+    "location": "/home/chenken/Documents/DeepEPI/data/genomic_features/bed",
+    "celltypes": {
+        "GM12878": {
+            "CTCF": "ENCFF710VEH.bed.gz"
+        },
+        "HeLa": {
+            "CTCF": "ENCFF768OPK.bed.gz"
+        },
+        "HMEC": {
+            "CTCF": "ENCFF288RFS.bed.gz"
+        },
+        "IMR90": {
+            "CTCF": "ENCFF453XKM.bed.gz"
+        },
+        "K562": {
+            "CTCF": "ENCFF738TKN.bed.gz"
+        },
+        "NHEK": {
+            "CTCF": "ENCFF226MQR.bed.gz"
+        },
+        "HUVEC": {
+            "CTCF": "ENCFF002DBA.bed.gz"
+        },
+        "Stomach": {
+            "CTCF": "ENCFF039SAY.bed.gz"
+        },
+        "neural_cell_H1": {
+            "CTCF": "ENCFF618DDO.bed.gz"
+        },
+        "brain_30d": {
+            "CTCF": "ENCFF286YTX.hg19.bed.gz"
+        },
+        "brain_90d": {
+            "CTCF": "ENCFF791OWQ.hg19.bed.gz"
+        },
+        "brain_180d": {
+            "CTCF": "ENCFF190FEC.hg19.bed.gz"
+        },
+        "neural_progenitor_cell_H9": {
+            "CTCF": "ENCFF072ZEU.bed.gz"
+        },
+        "neural_progenitor_cell_H1": {
+            "CTCF": "ENCFF402JJK.bed.gz"
+        },
+        "Liver": {
+            "CTCF": "ENCFF511PPM.bed.gz"
+        },
+        "Pancreas": {
+            "CTCF": "ENCFF867ERM.bed.gz"
+        },
+        "Ovary": {
+            "CTCF": "ENCFF261BWI.bed.gz"
+        },
+        "LeftVentricle": {
+            "CTCF": "ENCFF541DBX.bed.gz"
+        },
+        "SigmoidColon": {
+            "CTCF": "ENCFF637HAC.bed.gz"
+        },
+        "Spleen": {
+            "CTCF": "ENCFF396TUD.bed.gz"
+        },
+        "H1": {
+            "CTCF": "ENCFF093VEE.bed.gz"
+        }
+    }
+}
