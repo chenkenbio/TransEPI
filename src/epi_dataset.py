@@ -50,7 +50,14 @@ class EPIDataset(Dataset):
 
         self.feats_order = list(feats_order)
         self.num_feats = len(feats_order)
-        self.feats_config = OrderedDict(json.load(open(feats_config)))
+        self.feats_config = json.load(open(feats_config))
+        if "_location" in self.feats_config:
+            location =self.feats_config["_location"] 
+            del self.feats_config["_location"]
+            for cell, assays in self.feats_config.items():
+                for a, fn in assays.items():
+                    self.feats_config[cell][a] = os.path.join(location, fn)
+
         self.feats = dict() # cell_name -> feature_name -> chrom > features (array)
         self.chrom_bins = {
                 chrom: (length // bin_size) for chrom, length in hg19_chromsize.items()
@@ -227,8 +234,8 @@ if __name__ == "__main__":
     np.random.seed(args.seed)
 
     all_data = EPIDataset(
-            datasets=["../../data/BENGI/GM12878.HiC-Benchmark.v3.tsv"],
-            feats_config="../../data/genomic_features/CTCF_DNase_6histone.500.json",
+            datasets=["../data/BENGI/GM12878.HiC-Benchmark.v3.tsv"],
+            feats_config="../data/genomic_features/CTCF_DNase_6histone.500.json",
             feats_order=["CTCF", "DNase", "H3K27ac", "H3K4me1", "H3K4me3"],
             seq_len=2500000,
             bin_size=500,
