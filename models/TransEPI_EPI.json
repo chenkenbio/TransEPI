@@ -16,7 +16,7 @@
     },
 
     "model_opts": {
-        "model": "MultiHeadAttModel",
+        "model": "TransEPI",
         "cnn_channels": [180],
         "cnn_sizes": [11],
         "cnn_pool": [10],
