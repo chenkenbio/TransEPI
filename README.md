@@ -14,13 +14,8 @@ This repository contains the scripts, data, and trained models for TransEPI.
 # Preparing genomic features
 
 ## Genomic data  
-Edit the following feature data configuration files in json format:  
+Download the genomic features from [Synapse](https://www.synapse.org/#!Synapse:syn26156164) (recommanded) and edit the following feature data configuration files in json format:  
 - CTCF narrowPeak configuration file: `./data/genomic_data/bed/CTCF_bed.json`  
-- bigWig configuration file: `./data/genomic_data/bigwig/bw_6histone.json`  
-- Prepared features (500bp): `./data/genomic_data/CTCF_DNase_6histone.500.json`  
-- Prepared features (1000bp): `./data/genomic_data/CTCF_DNase_6histone.1000.json`  
-
-or directly download the genomic features from [Synapse](https://www.synapse.org/#!Synapse:syn26156164) (recommanded).
 
 
 ## model
