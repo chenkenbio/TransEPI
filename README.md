@@ -17,31 +17,15 @@ This repository contains the scripts, data, and trained models for TransEPI.
 Edit the following feature data configuration files in json format:  
 - CTCF narrowPeak configuration file: `./data/genomic_data/bed/CTCF_bed.json`  
 - bigWig configuration file: `./data/genomic_data/bigwig/bw_6histone.json`  
-- Prepared features (500bp)`./data/genomic_data/CTCF_DNase_6histone.500.json`  
-- Prepared features (1000bp)`./data/genomic_data/CTCF_DNase_6histone.1000.json`  
+- Prepared features (500bp): `./data/genomic_data/CTCF_DNase_6histone.500.json`  
+- Prepared features (1000bp): `./data/genomic_data/CTCF_DNase_6histone.1000.json`  
 
+or directly download the genomic features from [Dropbox](https://www.dropbox.com/s/nlj01rw3ffku7x1/TransEPI_processed_features.tar?dl=0)/[Synapse](https://www.synapse.org/#!Synapse:syn26156164).
 
-# Usage
-
-```bash
-./TransEPI_EPI.sh /path/to/query_dataset /path/to/output_directory
-./TransEPI_target.sh /path/to/query_dataset /path/to/output_directory
-```
-
-## Input
-
-
-## Output
-The output will be saved at `/path/to/output/directory/results.txt`
-
-## Demo
-
-```bash
-./TransEPI_EPI.sh demo/EPI_demo_data.tsv output/EPI_demo
-./Transtarget_target.sh demo/target_demo_data.tsv output/target_demo
-```
 
 ## model
+
+See `./models`
 
 # Datasets
 
@@ -49,7 +33,7 @@ All the datasets used in this study are available at `data/BENGI` and `data/HiC-
 
 # Baseline models and features   
 
-- TargetFinder: `./comparison/TargetFinder`  
+- TargetFinder: `./comparison/TargetFinder`   
 - 3DPredictor: `./comparison/3DPredictor`  
 
 
