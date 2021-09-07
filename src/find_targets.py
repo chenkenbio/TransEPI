@@ -302,7 +302,7 @@ def get_args():
         help="the region of interest, in BED4+")
     p.add_argument(
         '-t', "--targets", 
-        default="/home/chenken/biock/biock/processed_data/gencode.v19.tss.bed",
+        default="../data/annotation/gencode.v19.tss.bed",
         required=False, 
         help="in BED4+ format (enhancer/promoter annotation, etc)")
     p.add_argument(
@@ -310,7 +310,10 @@ def get_args():
         required=True, 
         help="Cell type")
     p.add_argument('--gpu', default=-1, type=int, help="GPU ID, (-1 for CPU)")
-    p.add_argument("--shift-mutation", default=0, type=int)
+    p.add_argument('--feature', 
+            default="../data/genomic_data/CTCF_DNase_6histone.500.json", 
+            help="Feature configuration")
+    p.add_argument("--shift-mutation", default=0, type=int, help="Deprecated options")
     p.add_argument("--batch-size", type=int, default=128)
     p.add_argument('-b', "--buildver", default="hg19", choices=("hg19", "hg38"))
     p.add_argument("--config", required=True)
@@ -335,7 +338,8 @@ if __name__ == "__main__":
     print("{}".format(config["data_opts"]), file=sys.stderr, flush=True)
 
     
-    config_fn = "/home/chenken/Documents/DeepEPI/data/genomic_features/CTCF_DNase_6histone.{}.json".format(bin_size)
+    # config_fn = "/home/chenken/Documents/DeepEPI/data/genomic_features/CTCF_DNase_6histone.{}.json".format(bin_size)
+    config_fn = args.feature
 
     all_data = EPITestDataset(
         args.bed, 
