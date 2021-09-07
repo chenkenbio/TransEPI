@@ -20,7 +20,7 @@ Edit the following feature data configuration files in json format:
 - Prepared features (500bp): `./data/genomic_data/CTCF_DNase_6histone.500.json`  
 - Prepared features (1000bp): `./data/genomic_data/CTCF_DNase_6histone.1000.json`  
 
-or directly download the genomic features from [Dropbox](https://www.dropbox.com/s/nlj01rw3ffku7x1/TransEPI_processed_features.tar?dl=0)/[Synapse](https://www.synapse.org/#!Synapse:syn26156164).
+or directly download the genomic features from [Synapse](https://www.synapse.org/#!Synapse:syn26156164) (recommanded).
 
 
 ## model
