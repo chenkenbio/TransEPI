@@ -1,9 +1,12 @@
 # TransEPI: Capturing large genomic contexts for accurately predicting enhancer-promoter interactions
 
-Implementation for [Capturing large genomic contexts for accurately predicting enhancer-promoter interactions](https://www.biorxiv.org/content/10.1101/2021.09.04.458817v1).
+**The Supplementary Table for the manuscript is available at [Supp_Table.xlsx]("./paper/Supp_Tables.xlsx")**
+
+The implementation and the datasets for [Capturing large genomic contexts for accurately predicting enhancer-promoter interactions](https://www.biorxiv.org/content/10.1101/2021.09.04.458817v1).
 
 TransEPI is a Transformer-based model for EPI prediction. 
 This repository contains the scripts, data, and trained models for TransEPI.
+
 
 ![TransEPI](./figures/Figure1.svg)
 
@@ -16,9 +19,7 @@ This repository contains the scripts, data, and trained models for TransEPI.
 # Preparing genomic features
 
 ## Genomic data  
-Download the genomic features from [Synapse](https://www.synapse.org/#!Synapse:syn26156164) (recommanded) and edit the following feature data configuration files in json format:  
-- CTCF narrowPeak configuration file: `./data/genomic_data/bed/CTCF_bed.json`  
-
+Download the genomic features from [Synapse:syn26156164](https://www.synapse.org/#!Synapse:syn26156164) and edit the feature configuration file `./data/genomic_data/CTCF_DNase_6histone.500.json`.
 
 ## model
 
