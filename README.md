@@ -1,6 +1,6 @@
 # TransEPI: Capturing large genomic contexts for accurately predicting enhancer-promoter interactions
 
-**The Supplementary Table for the manuscript is available at [Supp_Table.xlsx]("./paper/Supp_Tables.xlsx")**
+**The Supplementary Tables of the manuscript are available at [Supp_Table.xlsx](./paper/Supp_Tables.xlsx)**
 
 The implementation and the datasets for [Capturing large genomic contexts for accurately predicting enhancer-promoter interactions](https://www.biorxiv.org/content/10.1101/2021.09.04.458817v1).
 
