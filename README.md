@@ -38,7 +38,6 @@ Download the genomic features from [Synapse:syn26156164](https://www.synapse.org
 - `src/misc_utils.py`  
 - `src/prepare_bed_signals.py`  
 - `src/prepare_bw_signals.py`  
-- `src/prepare_Whalen_data.py`  
 
 # Model
 
