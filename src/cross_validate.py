@@ -164,11 +164,10 @@ def train_transformer_model(
 
 def get_args():
     p = argparse.ArgumentParser(formatter_class=argparse.ArgumentDefaultsHelpFormatter)
-    p.add_argument('-c', "--config", required=True)
-    p.add_argument('-o', "--outdir", required=True)
+    p.add_argument('-c', "--config", required=True, help="Configuration file for training the model")
+    p.add_argument('-o', "--outdir", required=True, help="Output directory")
     p.add_argument('--gpu', default=-1, type=int, help="GPU ID, (-1 for CPU)")
-
-    p.add_argument('--seed', type=int, default=2020)
+    p.add_argument('--seed', type=int, default=2020, help="Random seed")
     return p
 
 

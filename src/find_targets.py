@@ -299,7 +299,7 @@ def get_args():
     p = argparse.ArgumentParser(formatter_class=argparse.ArgumentDefaultsHelpFormatter)
     p.add_argument(
         'bed', 
-        help="the region of interest, in BED4+")
+        help="the region of interest, in BED4+ (e.g., variants)")
     p.add_argument(
         '-t', "--targets", 
         default="../data/annotation/gencode.v19.tss.bed",
@@ -308,20 +308,20 @@ def get_args():
     p.add_argument(
         '-c', "--cell", 
         required=True, 
-        help="Cell type")
+        help="cell type")
     p.add_argument('--gpu', default=-1, type=int, help="GPU ID, (-1 for CPU)")
     p.add_argument('--feature', 
             default="../data/genomic_data/CTCF_DNase_6histone.500.json", 
-            help="Feature configuration")
-    p.add_argument("--shift-mutation", default=0, type=int, help="Deprecated options")
-    p.add_argument("--batch-size", type=int, default=128)
-    p.add_argument('-b', "--buildver", default="hg19", choices=("hg19", "hg38"))
-    p.add_argument("--config", required=True)
+            help="feature configuration file (in json format)")
+    p.add_argument("--shift-mutation", default=0, type=int, help="deprecated")
+    p.add_argument("--batch-size", type=int, default=128, help="batch size")
+    p.add_argument('-b', "--buildver", default="hg19", choices=("hg19", "hg38"), help="reference genome version")
+    p.add_argument("--config", required=True, help="model configuration")
     p.add_argument(
         '-m', "--model", 
         required=True, 
-        help="Model")
-    p.add_argument("--num-workers", type=int, default=16, help="Number of workers")
+        help="path to model file")
+    p.add_argument("--num-workers", type=int, default=16, help="number of workers used in data loader")
     #p.add_argument('--seed', type=int, default=2020)
     return p
 

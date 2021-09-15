@@ -55,14 +55,14 @@ def predict(model: nn.Module, data_loader: DataLoader, device=torch.device('cuda
 
 def get_args():
     p = argparse.ArgumentParser(formatter_class=argparse.ArgumentDefaultsHelpFormatter)
-    p.add_argument('-t', "--test-data", nargs='+', required=True)
-    p.add_argument('--test-chroms', nargs='+', required=False, default=['all'])
+    p.add_argument('-t', "--test-data", nargs='+', required=True, help="test dataset")
+    p.add_argument('--test-chroms', nargs='+', required=False, default=['all'], help="chromosomes used for evaluation")
     p.add_argument('--gpu', default=-1, type=int, help="GPU ID, (-1 for CPU)")
-    p.add_argument('--batch-size',  default=128, type=int)
-    p.add_argument('--num-workers',  default=16, type=int)
-    p.add_argument('-c', "--config", required=True)
-    p.add_argument('-m', "--model", required=True)
-    p.add_argument('-p', "--prefix", required=True)
+    p.add_argument('--batch-size',  default=128, type=int, help="batch size")
+    p.add_argument('--num-workers',  default=16, type=int, help="number of the processes used by data loader ")
+    p.add_argument('-c', "--config", required=True, help="model configuration")
+    p.add_argument('-m', "--model", required=True, help="path to trained model")
+    p.add_argument('-p', "--prefix", required=True, help="prefix of output file")
 
     #p.add_argument('--seed', type=int, default=2020)
     return p
