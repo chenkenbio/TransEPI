@@ -14,6 +14,15 @@ import numpy as np
 
 from typing import Dict, List, Union
 
+from functools import partial
+
+
+def custom_open(fn):
+    if fn.endswith("gz"):
+        return gzip.open(fn, 'rt')
+    else:
+        return open(fn, 'rt')
+
 
 def get_args():
     p = argparse.ArgumentParser(formatter_class=argparse.ArgumentDefaultsHelpFormatter)
@@ -89,7 +98,7 @@ class EPIDataset(Dataset):
 
     def load_datasets(self):
         for fn in self.datasets:
-            with open(fn) as infile:
+            with custom_open(fn) as infile:
                 for l in infile:
                     label, dist, chrom, enh_start, enh_end, enh_name, \
                             _, prom_start, prom_end, prom_name = l.strip().split('\t')
