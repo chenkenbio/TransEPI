@@ -19,7 +19,8 @@ This repository contains the scripts, data, and trained models for TransEPI.
 * PyTorch>=1.6.0
 
 # Preparing genomic features
-Download the genomic features from [Synapse:syn26156164](https://www.synapse.org/#!Synapse:syn26156164) and edit the feature configuration file `./data/genomic_data/CTCF_DNase_6histone.500.json`.
+- Download the genomic features from [Synapse:syn26156164](https://www.synapse.org/#!Synapse:syn26156164) and edit the feature configuration file `./data/genomic_data/CTCF_DNase_6histone.500.json`.  
+- Or prepare features for other cell types using `src/prepare_bed_signals.py` and `src/prepare_bw_signals.py`.  
 
 # Scripts
 
@@ -34,8 +35,7 @@ Download the genomic features from [Synapse:syn26156164](https://www.synapse.org
 - `src/epi_dataset.py`  
 - `src/epi_models.py`  
 
-## misc scripts
-- `src/misc_utils.py`  
+## prepare genomic data
 - `src/prepare_bed_signals.py`  
 - `src/prepare_bw_signals.py`  
 
