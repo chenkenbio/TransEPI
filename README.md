@@ -39,6 +39,22 @@ This repository contains the scripts, data, and trained models for TransEPI.
 - `src/prepare_bed_signals.py`  
 - `src/prepare_bw_signals.py`  
 
+Run the above scripts with `--help` for usage:  
+```
+usage: cross_validate.py [-h] -c CONFIG -o OUTDIR [--gpu GPU] [--seed SEED]
+
+optional arguments:
+  -h, --help            show this help message and exit
+  -c CONFIG, --config CONFIG
+                        Configuration file for training the model (default:
+                        None)
+  -o OUTDIR, --outdir OUTDIR
+                        Output directory (default: None)
+  --gpu GPU             GPU ID, (-1 for CPU) (default: -1)
+  --seed SEED           Random seed (default: 2020)
+```
+
+
 # Model
 
 See `./models`
