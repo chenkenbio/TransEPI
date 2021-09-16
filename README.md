@@ -41,6 +41,7 @@ This repository contains the scripts, data, and trained models for TransEPI.
 
 Run the above scripts with `--help` for usage:  
 ```
+$ ./src/cross_validate.py --help
 usage: cross_validate.py [-h] -c CONFIG -o OUTDIR [--gpu GPU] [--seed SEED]
 
 optional arguments:
