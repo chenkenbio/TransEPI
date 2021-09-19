@@ -2,7 +2,7 @@
 
 The codes and datasets for [Capturing large genomic contexts for accurately predicting enhancer-promoter interactions](https://www.biorxiv.org/content/10.1101/2021.09.04.458817v1).
 
-**The Supplementary Tables** of the manuscript are available at [Supp_Tables.xlsx](./paper/Supp_Tables.xlsx)
+***The Supplementary Tables*** of the manuscript are available at [Supp_Tables.xlsx](./paper/Supp_Tables.xlsx)
 
 ---
 
@@ -14,9 +14,11 @@ This repository contains the scripts, data, and trained models for TransEPI.
 
 # Requirements
 
-* numpy
-* scikit-learn
-* PyTorch>=1.6.0
+* numpy  
+* tqdm  
+* scikit-learn  
+* PyTorch>=1.9.0 (recommended) or PyTorch 1.6.0+  
+* pyBigWig (optional, required by `prepare_bw_signals.py` for preparing features)
 
 # Preparing genomic features
 - Download the genomic features from [Synapse:syn26156164](https://www.synapse.org/#!Synapse:syn26156164) and edit the feature configuration file `./data/genomic_data/CTCF_DNase_6histone.500.json`.  

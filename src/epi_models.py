@@ -180,6 +180,11 @@ class TransEPI(nn.Module):
             fc: List[int], fc_dropout: float, seq_len: int=-1, pos_enc: bool=False,
             **kwargs):
         super(TransEPI, self).__init__()
+        
+        if float(torch.__version__) < 1.9:
+            self.transpose = True
+        else:
+            self.transpose = False
 
         if pos_enc:
             assert seq_len > 0
@@ -218,12 +223,20 @@ class TransEPI(nn.Module):
         else:
             self.pos_enc = None
         
-        enc_layer = nn.TransformerEncoderLayer(
-                d_model=cnn_channels[-1],
-                nhead=num_heads,
-                dim_feedforward=d_inner,
-                batch_first=True
-            )
+        if not self.transpose:
+            enc_layer = nn.TransformerEncoderLayer(
+                    d_model=cnn_channels[-1],
+                    nhead=num_heads,
+                    dim_feedforward=d_inner,
+                    batch_first=True
+                )
+        else:
+             enc_layer = nn.TransformerEncoderLayer(
+                    d_model=cnn_channels[-1],
+                    nhead=num_heads,
+                    dim_feedforward=d_inner,
+                )
+           
         self.encoder = nn.TransformerEncoder(
                 enc_layer,
                 num_layers=enc_layers
@@ -271,7 +284,12 @@ class TransEPI(nn.Module):
         batch_size, seq_len, feat_dim = feats.size()
         if self.pos_enc is not None:
             feats = self.pos_enc(feats)
+        if self.transpose:
+            feats = feats.transpose(0, 1)
         feats = self.encoder(feats) # (B, S, D)
+        if self.transpose:
+            feats = feats.transpose(0, 1)
+
         out = torch.tanh(self.att_first(feats)) # (B, S, da)
         out = F.softmax(self.att_second(out), 1) # (B, S, r)
         att = out.transpose(1, 2) # (B, r, S)
