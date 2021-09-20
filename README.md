@@ -25,7 +25,7 @@ This repository contains the scripts, data, and trained models for TransEPI.
 
 # Datasets  
 
-All the datasets used in this study are available at `data/BENGI` and `data/HiC-loops`.  
+All the datasets used in this study are available at [data/BENGI](data/BENGI) and [data/HiC-loops](data/HiC-loops).  
 
 
 # Input features  
@@ -79,8 +79,8 @@ See [models](./models).
 
 # Baseline models and features   
 
-- TargetFinder: `./comparison/TargetFinder`   
-- 3DPredictor: `./comparison/3DPredictor`  
+- TargetFinder: [comparison/TargetFinder](./comparison/TargetFinder)   
+- 3DPredictor: [comparison/3DPredictor](./comparison/3DPredictor)  
 
 
 # Questions
