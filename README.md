@@ -14,7 +14,7 @@ This repository contains the scripts, data, and trained models for TransEPI.
 
 ![TransEPI](./figures/Figure1.svg)
 
-# Requirements
+# Requirements  
 
 * numpy  
 * tqdm  
@@ -22,7 +22,14 @@ This repository contains the scripts, data, and trained models for TransEPI.
 * PyTorch>=1.9.0 (recommended) or PyTorch 1.6.0+  
 * pyBigWig (optional, required by `prepare_bw_signals.py` for preparing features)
 
+
+# Datasets  
+
+All the datasets used in this study are available at `data/BENGI` and `data/HiC-loops`.  
+
+
 # Input features  
+
 - Download the genomic features from [Synapse:syn26156164](https://www.synapse.org/#!Synapse:syn26156164) and edit the feature configuration file `./data/genomic_data/CTCF_DNase_6histone.500.json` to specifiy the location of the genomic feature files. *Absolute path is required!*  
 - Or prepare features for other cell types using `src/prepare_bed_signals.py` and `src/prepare_bw_signals.py`. See `./data/genomic_data/pipeline.sh` for usage.  
 
@@ -36,13 +43,15 @@ This repository contains the scripts, data, and trained models for TransEPI.
 - `src/cross_validate.py`  
 - `src/evaluate_model.py`  
 
-## find target genes of non-coding mutations  
+## finding target genes of non-coding mutations  
 - `src/find_targets.py`  
 
-## prepare genomic data
+## preparing genomic data
 - `src/prepare_bed_signals.py`  
 - `src/prepare_bw_signals.py`  
 
+
+## how to use:  
 
 Run the above scripts with `--help` to see the usage:  
 ```
@@ -67,9 +76,6 @@ A demo configuration file is available at [models/TransEPI_EPI.json](models/Tran
 
 See [models](./models).  
 
-# Datasets
-
-All the datasets used in this study are available at `data/BENGI` and `data/HiC-loops`.  
 
 # Baseline models and features   
 
