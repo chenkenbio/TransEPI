@@ -22,7 +22,7 @@ This repository contains the scripts, data, and trained models for TransEPI.
 * PyTorch>=1.9.0 (recommended) or PyTorch 1.6.0+  
 * pyBigWig (optional, required by `prepare_bw_signals.py` for preparing features)
 
-# Preparing genomic features
+# Input features  
 - Download the genomic features from [Synapse:syn26156164](https://www.synapse.org/#!Synapse:syn26156164) and edit the feature configuration file `./data/genomic_data/CTCF_DNase_6histone.500.json` to specifiy the location of the genomic feature files. *Absolute path is required!*  
 - Or prepare features for other cell types using `src/prepare_bed_signals.py` and `src/prepare_bw_signals.py`. See `./data/genomic_data/pipeline.sh` for usage.  
 
@@ -60,8 +60,10 @@ optional arguments:
   --seed SEED           Random seed (default: 2020)
 ```
 
+A demo configuration file is available at [models/TransEPI_EPI.json](models/TransEPI_EPI.json).
 
-# Model
+
+# Models
 
 See [models](./models).  
 
