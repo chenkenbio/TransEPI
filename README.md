@@ -2,6 +2,8 @@
 
 The codes and datasets for [Capturing large genomic contexts for accurately predicting enhancer-promoter interactions](https://www.biorxiv.org/content/10.1101/2021.09.04.458817v1).
 
+---  
+
 ***The Supplementary Tables*** of the manuscript are available at [Supp_Tables.xlsx](./paper/Supp_Tables.xlsx)
 
 ---
@@ -21,10 +23,14 @@ This repository contains the scripts, data, and trained models for TransEPI.
 * pyBigWig (optional, required by `prepare_bw_signals.py` for preparing features)
 
 # Preparing genomic features
-- Download the genomic features from [Synapse:syn26156164](https://www.synapse.org/#!Synapse:syn26156164) and edit the feature configuration file `./data/genomic_data/CTCF_DNase_6histone.500.json`.  
-- Or prepare features for other cell types using `src/prepare_bed_signals.py` and `src/prepare_bw_signals.py`.  
+- Download the genomic features from [Synapse:syn26156164](https://www.synapse.org/#!Synapse:syn26156164) and edit the feature configuration file `./data/genomic_data/CTCF_DNase_6histone.500.json` to specifiy the location of the genomic feature files. *Absolute path is required!*  
+- Or prepare features for other cell types using `src/prepare_bed_signals.py` and `src/prepare_bw_signals.py`. See `./data/genomic_data/pipeline.sh` for usage.  
 
 # Scripts
+
+## dataset & model
+- `src/epi_dataset.py`  
+- `src/epi_models.py`  
 
 ## cross validation & evaluation
 - `src/cross_validate.py`  
@@ -33,15 +39,12 @@ This repository contains the scripts, data, and trained models for TransEPI.
 ## find target genes of non-coding mutations  
 - `src/find_targets.py`  
 
-## dataset & model
-- `src/epi_dataset.py`  
-- `src/epi_models.py`  
-
 ## prepare genomic data
 - `src/prepare_bed_signals.py`  
 - `src/prepare_bw_signals.py`  
 
-Run the above scripts with `--help` for usage:  
+
+Run the above scripts with `--help` to see the usage:  
 ```
 $ ./src/cross_validate.py --help
 usage: cross_validate.py [-h] -c CONFIG -o OUTDIR [--gpu GPU] [--seed SEED]
@@ -60,11 +63,11 @@ optional arguments:
 
 # Model
 
-See `./models`
+See [models](./models).  
 
 # Datasets
 
-All the datasets used in this study are available at `data/BENGI` and `data/HiC-loops`
+All the datasets used in this study are available at `data/BENGI` and `data/HiC-loops`.  
 
 # Baseline models and features   
 
@@ -73,7 +76,7 @@ All the datasets used in this study are available at `data/BENGI` and `data/HiC-
 
 
 # Questions
-For questions about the datasets and code, please contact [chenkenbio@gmail.com](mailto:chenkenbio@gmail.com).
+For questions about the datasets and code, please contact [chenkenbio@gmail.com](mailto:chenkenbio@gmail.com) or create an issue.
 
 # Citation
 
