@@ -9,7 +9,7 @@
             "../data/BENGI/HeLa.RNAPII-ChIAPET-Benchmark.v3.tsv"
         ],
         "feats_order": ["CTCF", "DNase", "H3K4me1", "H3K4me3", "H3K36me3", "H3K9me3",  "H3K27me3"],
-        "feats_config": "../data/genomic_features/CTCF_DNase_6histone.500.json",
+        "feats_config": "../data/genomic_data/CTCF_DNase_6histone.500.json",
         "bin_size": 500,
         "seq_len": 2500000,
         "rand_shift": true
