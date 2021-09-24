@@ -181,7 +181,7 @@ class TransEPI(nn.Module):
             **kwargs):
         super(TransEPI, self).__init__()
         
-        if float(torch.__version__) < 1.9:
+        if float('.'.join(torch.__version__.split('.')[0:2])) < 1.9:
             self.transpose = True
         else:
             self.transpose = False
