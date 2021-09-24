@@ -1,0 +1,40 @@
+- Fold 0
+## datasets: ['../../data/BENGI/IMR90.HiC-Benchmark.v3.tsv']
+## testing chroms: ['chr1', 'chr10', 'chr15', 'chr21']
+## label classes: {0: 0.888, 1: 0.112}
+AUC:	0.9407
+AUPR:	0.7304(6.5214)
+/home/chenken/opt/anaconda3/lib/python3.8/site-packages/torch/nn/functional.py:652: UserWarning: Named tensors and all their associated APIs are an experimental feature and subject to change. Please do not use them for anything important until they are released as stable. (Triggered internally at  /opt/conda/conda-bld/pytorch_1623448278899/work/c10/core/TensorImpl.h:1156.)
+  return torch.max_pool1d(input, kernel_size, stride, padding, dilation, ceil_mode)
+- Fold 1
+## datasets: ['../../data/BENGI/IMR90.HiC-Benchmark.v3.tsv']
+## testing chroms: ['chr19', 'chr3', 'chr4', 'chr7', 'chrX']
+## label classes: {0: 0.907, 1: 0.093}
+AUC:	0.8238
+AUPR:	0.4518(4.8584)
+/home/chenken/opt/anaconda3/lib/python3.8/site-packages/torch/nn/functional.py:652: UserWarning: Named tensors and all their associated APIs are an experimental feature and subject to change. Please do not use them for anything important until they are released as stable. (Triggered internally at  /opt/conda/conda-bld/pytorch_1623448278899/work/c10/core/TensorImpl.h:1156.)
+  return torch.max_pool1d(input, kernel_size, stride, padding, dilation, ceil_mode)
+- Fold 2
+## datasets: ['../../data/BENGI/IMR90.HiC-Benchmark.v3.tsv']
+## testing chroms: ['chr13', 'chr17', 'chr2', 'chr22', 'chr9']
+## label classes: {0: 0.9, 1: 0.1}
+AUC:	0.9252
+AUPR:	0.7023(7.0226)
+/home/chenken/opt/anaconda3/lib/python3.8/site-packages/torch/nn/functional.py:652: UserWarning: Named tensors and all their associated APIs are an experimental feature and subject to change. Please do not use them for anything important until they are released as stable. (Triggered internally at  /opt/conda/conda-bld/pytorch_1623448278899/work/c10/core/TensorImpl.h:1156.)
+  return torch.max_pool1d(input, kernel_size, stride, padding, dilation, ceil_mode)
+- Fold 3
+## datasets: ['../../data/BENGI/IMR90.HiC-Benchmark.v3.tsv']
+## testing chroms: ['chr12', 'chr14', 'chr16', 'chr18', 'chr20']
+## label classes: {0: 0.912, 1: 0.088}
+AUC:	0.8725
+AUPR:	0.4863(5.5263)
+/home/chenken/opt/anaconda3/lib/python3.8/site-packages/torch/nn/functional.py:652: UserWarning: Named tensors and all their associated APIs are an experimental feature and subject to change. Please do not use them for anything important until they are released as stable. (Triggered internally at  /opt/conda/conda-bld/pytorch_1623448278899/work/c10/core/TensorImpl.h:1156.)
+  return torch.max_pool1d(input, kernel_size, stride, padding, dilation, ceil_mode)
+- Fold 4
+## datasets: ['../../data/BENGI/IMR90.HiC-Benchmark.v3.tsv']
+## testing chroms: ['chr11', 'chr5', 'chr6', 'chr8']
+## label classes: {0: 0.892, 1: 0.108}
+AUC:	0.8825
+AUPR:	0.5430(5.0279)
+/home/chenken/opt/anaconda3/lib/python3.8/site-packages/torch/nn/functional.py:652: UserWarning: Named tensors and all their associated APIs are an experimental feature and subject to change. Please do not use them for anything important until they are released as stable. (Triggered internally at  /opt/conda/conda-bld/pytorch_1623448278899/work/c10/core/TensorImpl.h:1156.)
+  return torch.max_pool1d(input, kernel_size, stride, padding, dilation, ceil_mode)
