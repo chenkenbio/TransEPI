@@ -79,7 +79,7 @@ See [models](./models).
 
 # Reproducibility
 
-To reproduce the major results shown in the manuscripts, see [dev/run_cv.sh](./dev/run_cv.sh) [dev/run_pred.sh](./dev/run_pred.sh).
+To reproduce the major results shown in the manuscripts, see [dev/run_cv.sh](./dev/run_cv.sh) (cross validation) and [dev/run_pred.sh](./dev/run_pred.sh) (evaluation).
 
 
 # Baseline models and features   
