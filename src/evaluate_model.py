@@ -106,7 +106,7 @@ if __name__ == "__main__":
         )
     
     if args.gpu >= 0:
-        os.environ["CUDA_VISIBLE_DEVICES"] = args.gpu
+        os.environ["CUDA_VISIBLE_DEVICES"] = str(args.gpu)
         device = torch.device("cuda")
     else:
         device = torch.device('cpu')
