@@ -77,6 +77,11 @@ A demo configuration file is available at [models/TransEPI_EPI.json](models/Tran
 See [models](./models).  
 
 
+# Reproducibility
+
+To reproduce the major results shown in the manuscripts, see [dev/run_cv.sh](./dev/run_cv.sh) [dev/run_pred.sh](./dev/run_pred.sh).
+
+
 # Baseline models and features   
 
 - TargetFinder: [comparison/TargetFinder](./comparison/TargetFinder)   
