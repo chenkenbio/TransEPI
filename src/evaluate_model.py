@@ -114,7 +114,7 @@ if __name__ == "__main__":
 
     model_class = getattr(epi_models, config["model_opts"]["model"])
     model = model_class(**config["model_opts"]).to(device)
-    model.load_state_dict(torch.load(args.model)["model_state_dict"])
+    model.load_state_dict(torch.load(args.model, map_location=device)["model_state_dict"])
     model.eval()
 
     pred, true = predict(model, test_loader, device)
