@@ -119,26 +119,26 @@ The configuration file should be in `.json` format:
 
 The input to the TransEPI model should be formatted as:
 
-	1. label: for datasets without known labels, set it to 0
-	2. distance: the between the enhancer and the promoter
-	3. e_chr: enhancer chromosome
-	4. e_start: enhancer start
-	5. e_end: enhancer end
-	6. enhancer name: the name of the cell type should be placed in the second field of enhancer name: e.g.: chr5:317258-317610|GM12878|EH37E0762690. (shoule be separated by `|`)
-	7. p_chr: promoter chromosome
-	8. p_start: promoter start
-	9. p_end: promoter end
-	10. promoter name: the name of the cell type should be placed in the second field of promoter name: e.g.: chr5:317258-317610|GM12878|EH37E0762690. (shoule be separated by `|`)
-	11. mask region (optional): the feature values in the mask regions will be masked (set to 0). e.g.: 889314-895314;317258-327258
-
-The input files should be tab separated
-
-Example:
 ```
 1	572380.0	chr5	317258	317610	chr5:317258-317610|GM12878|EH37E0762690	chr5	889314	891314	chr5:889813-889814|GM12878|ENSG00000028310.13|ENST00000388890.4|-
 0	100101.0	chr5	317258	317610	chr5:317258-317610|GM12878|EH37E0762690	chr5	216833	218833	chr5:217332-217333|GM12878|ENSG00000164366.3|ENST00000441693.2|-
 ```
 
+The fields in the input file are:
+
+    1. label: for datasets without known labels, set it to 0
+    2. distance: the between the enhancer and the promoter
+    3. e_chr: enhancer chromosome
+    4. e_start: enhancer start
+    5. e_end: enhancer end
+    6. enhancer name: the name of the cell type should be placed in the second field of enhancer name: e.g.: chr5:317258-317610|GM12878|EH37E0762690. (shoule be separated by `|`)
+    7. p_chr: promoter chromosome
+    8. p_start: promoter start
+    9. p_end: promoter end
+    10. promoter name: the name of the cell type should be placed in the second field of promoter name: e.g.: chr5:317258-317610|GM12878|EH37E0762690. (shoule be separated by `|`)
+    11. mask region (optional): the feature values in the mask regions will be masked (set to 0). e.g.: 889314-895314;317258-327258
+
+The input files should be tab separated
 
 
 ## Train the model
@@ -163,8 +163,7 @@ To reproduce the major results shown in the manuscripts, see [dev/run_cv.sh](./d
 
 
 # Experimental feature
-TransEPI could accept variable length input:
-- dataset file: `src/epi_variable_dataset.py`
+Replace `epi_dataset.py` with the `src/epi_variable_dataset.py` to enable TransEPI supporting variable length input
 
 # Questions
 For questions about the datasets and code, please contact [chenkenbio@gmail.com](mailto:chenkenbio@gmail.com) or create an issue.
