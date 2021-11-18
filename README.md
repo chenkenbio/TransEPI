@@ -159,12 +159,6 @@ The trained models are available at [models](./models).
 To reproduce the major results shown in the manuscripts, see [dev/run_cv.sh](./dev/run_cv.sh) (cross validation) and [dev/run_pred.sh](./dev/run_pred.sh) (evaluation).
 
 
-# Baseline models and features   
-
-- TargetFinder: [comparison/TargetFinder](./comparison/TargetFinder)   
-- 3DPredictor: [comparison/3DPredictor](./comparison/3DPredictor)  
-
-
 # Questions
 For questions about the datasets and code, please contact [chenkenbio@gmail.com](mailto:chenkenbio@gmail.com) or create an issue.
 
