@@ -44,6 +44,7 @@ class EPIDataset(Dataset):
             mask_window=False,
             sin_encoding=False,
             rand_shift=False,
+            
             **kwargs):
         super(EPIDataset, self).__init__()
 
@@ -100,8 +101,18 @@ class EPIDataset(Dataset):
         for fn in self.datasets:
             with custom_open(fn) as infile:
                 for l in infile:
+                    fields = l.strip().split('\t')
                     label, dist, chrom, enh_start, enh_end, enh_name, \
-                            _, prom_start, prom_end, prom_name = l.strip().split('\t')
+                            _, prom_start, prom_end, prom_name = fields[0:10]
+                    knock_range = None
+                    if len(fields) > 10:
+                        assert len(fields) == 11
+                        knock_range = list()
+                        for knock in fields[10].split(';'):
+                            knock_start, knock_end = knock.split('-')
+                            knock_start, knock_end = int(knock_start), int(knock_end)
+                            knock_range.append((knock_start, knock_end))
+
                     cell = enh_name.split('|')[1]
                     strand = prom_name.split('|')[-1]
 
@@ -148,7 +159,7 @@ class EPIDataset(Dataset):
                         left_pad_bin, right_pad_bin, 
                         enh_bin, prom_bin, 
                         cell, chrom, np.log2(1 + 500000 / float(dist)),
-                        int(label)
+                        int(label), knock_range
                     ))
                     # print(l.strip())
                     # print(self.samples[-1])
@@ -173,7 +184,7 @@ class EPIDataset(Dataset):
         return len(self.samples)
     
     def __getitem__(self, idx):
-        start_bin, stop_bin, left_pad, right_pad, enh_bin, prom_bin, cell, chrom, dist, label = self.samples[idx]
+        start_bin, stop_bin, left_pad, right_pad, enh_bin, prom_bin, cell, chrom, dist, label, knock_range = self.samples[idx]
         enh_idx = enh_bin - start_bin + left_pad
         prom_idx = prom_bin - start_bin + left_pad
 
@@ -188,6 +199,18 @@ class EPIDataset(Dataset):
             torch.zeros((self.num_feats, right_pad))
             ), dim=1)
 
+        if knock_range is not None:
+            dim, length = ar.size()
+            mask = [1 for _ in range(self.num_bins)]
+            for knock_start, knock_end in knock_range:
+                knock_start = knock_start // self.bin_size - start_bin + left_pad
+                knock_end = knock_end // self.bin_size - start_bin + left_pad
+                for pos in range(max(0, knock_start), min(knock_end + 1, self.num_bins)):
+                    mask[pos] = 0
+            mask = np.array(mask, dtype=np.float32).reshape(1, -1)
+            mask = np.concatenate([mask for _ in range(dim)], axis=0)
+            mask = torch.FloatTensor(mask)
+            ar = ar * mask
 
         if self.mask_window:
             shift = min(abs(enh_bin - prom_bin) - 5, 0)
