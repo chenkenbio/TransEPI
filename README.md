@@ -2,12 +2,12 @@
 
 The codes and datasets for [Capturing large genomic contexts for accurately predicting enhancer-promoter interactions](https://www.biorxiv.org/content/10.1101/2021.09.04.458817v1).
 
-
 TransEPI is a Transformer-based model for EPI prediction. 
 This repository contains the scripts, data, and trained models for TransEPI.
 
-
 ![TransEPI](./figures/Figure1.svg)
+
+
 
 # Requirements  
 
@@ -31,36 +31,12 @@ All the datasets used in this study are available at [data/BENGI](data/BENGI) an
 git clone git@github.com:biomed-AI/TransEPI.git
 ```
 
-2. Prepare the genomic data
+2. Download the genomic data
 
 - Download the genomic features from [Synapse:syn26156164](https://www.synapse.org/#!Synapse:syn26156164) 
-- edit the feature configuration file `./data/genomic_data/CTCF_DNase_6histone.500.json` to specifiy the locations of the genomic feature files downloaded from Synapse. *Absolute path is required!*  
+- Edit the feature configuration file `./data/genomic_data/CTCF_DNase_6histone.500.json` to specifiy the locations of the genomic feature files downloaded from Synapse. *Absolute path is required!*  
 
-3. Prepare input files
-
-The input to the TransEPI model should be formatted as:
-
-	1. label: for datasets without known labels, set it to 0
-	2. distance: the between the enhancer and the promoter
-	3. e_chr: enhancer chromosome
-	4. e_start: enhancer start
-	5. e_end: enhancer end
-	6. enhancer name: the name of the cell type should be placed in the second field of enhancer name: e.g.: chr5:317258-317610|GM12878|EH37E0762690. (shoule be separated by `|`)
-	7. p_chr: promoter chromosome
-	8. p_start: promoter start
-	9. p_end: promoter end
-	10. promoter name: the name of the cell type should be placed in the second field of promoter name: e.g.: chr5:317258-317610|GM12878|EH37E0762690. (shoule be separated by `|`)
-	11. mask region (optional): the feature values in the mask regions will be masked (set to 0). e.g.: 889314-895314;317258-327258
-
-The input files should be tab separated
-
-Example:
-```
-1	572380.0	chr5	317258	317610	chr5:317258-317610|GM12878|EH37E0762690	chr5	889314	891314	chr5:889813-889814|GM12878|ENSG00000028310.13|ENST00000388890.4|-
-0	100101.0	chr5	317258	317610	chr5:317258-317610|GM12878|EH37E0762690	chr5	216833	218833	chr5:217332-217333|GM12878|ENSG00000164366.3|ENST00000441693.2|-
-```
-
-4. Run the model
+3. Run the model
 ```
 cd TransEPI/src
 python ./evaluate_model.py \
@@ -69,8 +45,10 @@ python ./evaluate_model.py \
 	-m ../models/TransEPI_EPI_fold0.pt \
 	-p output
 ```
+The predictions will be available at `output.prediction.txt`
 
-# Step-by-step guide for custom usage
+
+# Step-by-step guide
 
 ## Preparing genomic data
 1. Download the genomic data required by TransEPI
@@ -137,9 +115,34 @@ The configuration file should be in `.json` format:
 ```
 **Note**: the comments after `//` are used to describe the meaning of the items in json file. They should be removed because the json format does not support comments
 
+## Prepare input files
+
+The input to the TransEPI model should be formatted as:
+
+	1. label: for datasets without known labels, set it to 0
+	2. distance: the between the enhancer and the promoter
+	3. e_chr: enhancer chromosome
+	4. e_start: enhancer start
+	5. e_end: enhancer end
+	6. enhancer name: the name of the cell type should be placed in the second field of enhancer name: e.g.: chr5:317258-317610|GM12878|EH37E0762690. (shoule be separated by `|`)
+	7. p_chr: promoter chromosome
+	8. p_start: promoter start
+	9. p_end: promoter end
+	10. promoter name: the name of the cell type should be placed in the second field of promoter name: e.g.: chr5:317258-317610|GM12878|EH37E0762690. (shoule be separated by `|`)
+	11. mask region (optional): the feature values in the mask regions will be masked (set to 0). e.g.: 889314-895314;317258-327258
+
+The input files should be tab separated
+
+Example:
+```
+1	572380.0	chr5	317258	317610	chr5:317258-317610|GM12878|EH37E0762690	chr5	889314	891314	chr5:889813-889814|GM12878|ENSG00000028310.13|ENST00000388890.4|-
+0	100101.0	chr5	317258	317610	chr5:317258-317610|GM12878|EH37E0762690	chr5	216833	218833	chr5:217332-217333|GM12878|ENSG00000164366.3|ENST00000441693.2|-
+```
+
+
 
 ## Train the model
-1. cross validation
+- cross validation
 ```
 python cross_validate.py \
 	-c config.json \  # the json file prepared in "Preparing the configuration file for training model"
