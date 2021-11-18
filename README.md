@@ -63,7 +63,6 @@ Example:
 4. Run the model
 ```
 cd TransEPI/src
-chmod +x ./evaluate_
 python ./evaluate_model.py \
 	-t ../data/BENGI/HMEC.HiC-Benchmark.v3.tsv.gz \
 	-c ../models/TransEPI_EPI.json \
@@ -137,6 +136,16 @@ The configuration file should be in `.json` format:
 }
 ```
 **Note**: the comments after `//` are used to describe the meaning of the items in json file. They should be removed because the json format does not support comments
+
+
+## Train the model
+1. cross validation
+```
+python cross_validate.py \
+	-c config.json \  # the json file prepared in "Preparing the configuration file for training model"
+	--gpu 0 		  # GPU ID, set it to -1 to use CPU
+	-o outdir 		  # output directory
+```
 
 
 
