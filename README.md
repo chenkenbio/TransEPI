@@ -4,7 +4,7 @@ The codes and datasets for [Capturing large genomic contexts for accurately pred
 
 ---  
 
-***The Supplementary Tables*** of the manuscript are available at [Supp_Tables.xlsx](./paper/Supp_Tables.xlsx)
+***Supplementary Data*** of the manuscript are available at [](./paper/supplementary_data)
 
 ---
 
@@ -28,53 +28,59 @@ This repository contains the scripts, data, and trained models for TransEPI.
 All the datasets used in this study are available at [data/BENGI](data/BENGI) and [data/HiC-loops](data/HiC-loops).  
 
 
-# Input features  
 
-- Download the genomic features from [Synapse:syn26156164](https://www.synapse.org/#!Synapse:syn26156164) and edit the feature configuration file `./data/genomic_data/CTCF_DNase_6histone.500.json` to specifiy the location of the genomic feature files. *Absolute path is required!*  
-- Or prepare features for other cell types using `src/prepare_bed_signals.py` and `src/prepare_bw_signals.py`. See `./data/genomic_data/pipeline.sh` for usage.  
+# Quick start
 
-# Scripts
-
-## dataset & model
-- `src/epi_dataset.py`  
-- `src/epi_models.py`  
-
-## cross validation & evaluation
-- `src/cross_validate.py`  
-- `src/evaluate_model.py`  
-
-## finding target genes of non-coding mutations  
-- `src/find_targets.py`  
-
-## preparing genomic data
-- `src/prepare_bed_signals.py`  
-- `src/prepare_bw_signals.py`  
-
-
-## how to use:  
-
-Run the above scripts with `--help` to see the usage:  
+1. Clone the codes: 
 ```
-$ ./src/cross_validate.py --help
-usage: cross_validate.py [-h] -c CONFIG -o OUTDIR [--gpu GPU] [--seed SEED]
-
-optional arguments:
-  -h, --help            show this help message and exit
-  -c CONFIG, --config CONFIG
-                        Configuration file for training the model (default:
-                        None)
-  -o OUTDIR, --outdir OUTDIR
-                        Output directory (default: None)
-  --gpu GPU             GPU ID, (-1 for CPU) (default: -1)
-  --seed SEED           Random seed (default: 2020)
+git clone git@github.com:biomed-AI/TransEPI.git
 ```
 
-A demo configuration file is available at [models/TransEPI_EPI.json](models/TransEPI_EPI.json).
+2. Preparing input features
+
+	* **The feature data used in our study**:
+Download the genomic features from [Synapse:syn26156164](https://www.synapse.org/#!Synapse:syn26156164) and edit the feature configuration file `./data/genomic_data/CTCF_DNase_6histone.500.json` to specifiy the location of the genomic feature files. *Absolute path is required!*  
+
+3. Preparing input files
+The input to the TransEPI model should be formatted as:
+	1. label: for datasets without known labels, set it to 0
+	2. distance: the between the enhancer and the promoter
+	3. e_chr: enhancer chromosome
+	4. e_start: enhancer start
+	5. e_end: enhancer end
+	6. enhancer name: the name of the cell type should be placed in the second field of enhancer name: e.g.: chr5:317258-317610|GM12878|EH37E0762690. (shoule be separated by `|`)
+	7. p_chr: promoter chromosome
+	8. p_start: promoter start
+	9. p_end: promoter end
+	10. promoter name: the name of the cell type should be placed in the second field of promoter name: e.g.: chr5:317258-317610|GM12878|EH37E0762690. (shoule be separated by `|`)
+	11. mask region (optional): the feature values in the mask regions will be masked (set to 0). e.g.: 889314-895314;317258-327258
+
+The input files should be tab separated
+
+Example:
+```
+1	572380.0	chr5	317258	317610	chr5:317258-317610|GM12878|EH37E0762690	chr5	889314	891314	chr5:889813-889814|GM12878|ENSG00000028310.13|ENST00000388890.4|-
+0	100101.0	chr5	317258	317610	chr5:317258-317610|GM12878|EH37E0762690	chr5	216833	218833	chr5:217332-217333|GM12878|ENSG00000164366.3|ENST00000441693.2|-
+```
+
+
+
+4. Run the model
+```
+cd TransEPI/src
+chmod +x ./evaluate_
+python ./evaluate_model.py \
+	-t ../data/BENGI/HMEC.HiC-Benchmark.v3.tsv.gz \
+	-c ../models/TransEPI_EPI.json \
+	-m ../models/TransEPI_EPI_fold0.pt \
+	-p output
+```
+
 
 
 # Models
 
-See [models](./models).  
+The trained models are available at [models](./models).  
 
 
 # Reproducibility
