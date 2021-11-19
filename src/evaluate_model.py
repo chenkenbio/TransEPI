@@ -58,7 +58,7 @@ def get_args():
     p.add_argument('-t', "--test-data", nargs='+', required=True, help="test dataset")
     p.add_argument('--test-chroms', nargs='+', required=False, default=['all'], help="chromosomes used for evaluation")
     p.add_argument('--gpu', default=-1, type=int, help="GPU ID, (-1 for CPU)")
-    p.add_argument('--batch-size',  default=128, type=int, help="batch size")
+    p.add_argument('--batch-size',  default=32, type=int, help="batch size")
     p.add_argument('--num-workers',  default=16, type=int, help="number of the processes used by data loader ")
     p.add_argument('-c', "--config", required=True, help="model configuration")
     p.add_argument('-m', "--model", required=True, help="path to trained model")
@@ -73,9 +73,14 @@ if __name__ == "__main__":
     args = p.parse_args()
     #np.random.seed(args.seed)
 
+    if not torch.cuda.is_available():
+        warnings.warn("GPU is not available")
+        args.gpu = -1
+
     config = json.load(open(args.config))
     
     config["data_opts"]["datasets"] = args.test_data
+    config["model_opts"]["rand_shift"] = False
 
     all_data = epi_dataset.EPIDataset(**config["data_opts"])
 
