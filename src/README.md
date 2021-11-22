@@ -1,0 +1,11 @@
+# src
+- cross_validate.py: train model through the chromosome-split cross validation scheme   
+- train_validate.py: train model through the train/validation scheme  
+- epi_dataset.py: dataset    
+    - epi_variable_dataset.py: dataset for input of variable lengths(experimental)   
+- epi_models.py: TransEPI model  
+- evaluate_model.py: evaluate model/make predictions  
+- find_targets.py: find target genes for non-coding mutations  
+- misc_utils.py: misc functions  
+- prepare_bed_signals.py: process narrowPeak files  
+- prepare_bw_signals.py: process bigWig files  
