@@ -24,7 +24,9 @@ All the datasets used in this study are available at [data/BENGI](data/BENGI) an
 
 
 
-# Quick start
+# Quickstart
+
+*Quickstart is a guide for using the pre-trained models provided in [models](./models). To train models on custom datasets, please refer to the ``step-by-step guide'' in the next section.*
 
 1. Clone the codes: 
 ```
@@ -43,7 +45,7 @@ python ./evaluate_model.py \
 	-t ../data/BENGI/HMEC.HiC-Benchmark.v3.tsv.gz \  # samples to be predicted
 	-c ../models/TransEPI_EPI.json \                 # configuration file
         --gpu 0 \                                        # GPU ID, set it to -1 to use CPU
-	-m ../models/TransEPI_EPI_fold0.pt \             # model file
+	-m ../models/TransEPI_EPI_valHMEC.pt \           # model file
 	-p output                                        # prefix of the output
 ```
 The predictions will be available at `output.prediction.txt`
@@ -51,7 +53,8 @@ The predictions will be available at `output.prediction.txt`
 
 # Step-by-step guide
 
-## Prepare genomic data (for cell types not included in [Synapse:syn26156164](https://www.synapse.org/#!Synapse:syn26156164))  
+## Prepare genomic data 
+*For cell types not included in [Synapse:syn26156164](https://www.synapse.org/#!Synapse:syn26156164)*
 1. Download the genomic data required by TransEPI from [ENCODE](https://www.encodeproject.org/) or [Roadmap](https://egg2.wustl.edu/roadmap/web_portal/processed_data.html#ChipSeq_DNaseSeq)  
     - CTCF ChIP-seq data in narrowPeak format
     - DNase-seq data in bigWig format
@@ -71,6 +74,7 @@ bash ./pipeline.sh
 - The processed data files should be specified in `TransEPI/data/genomic_data/CTCF_DNase_6histone.500.json`
 
 ## Prepare the configuration file for model training
+
 The configuration file should be in `.json` format:
 ```
 {
