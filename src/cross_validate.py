@@ -47,19 +47,17 @@ def model_summary(model):
 
 def predict(model: nn.Module, data_loader: DataLoader, device=torch.device('cuda')):
     model.eval()
-    result, true_label = None, None
+    result, true_label = list(), list()
     for feats, _, enh_idxs, prom_idxs, labels in data_loader:
         feats, labels = feats.to(device), labels.to(device)
         # enh_idxs, prom_idxs = feats.to(device), prom_idxs.to(device)
         pred = model(feats, enh_idx=enh_idxs, prom_idx=prom_idxs)
         pred = pred.detach().cpu().numpy()
         labels = labels.detach().cpu().numpy()
-        if result is None:
-            result = pred
-            true_label = labels
-        else:
-            result = np.concatenate((result, pred), axis=0)
-            true_label = np.concatenate((true_label, labels), axis=0)
+        result.append(pred)
+        true_label.append(labels)
+    result = np.concatenate(result, axis=0)
+    true_label = np.concatenate(true_label, axis=0)
     return (result.squeeze(), true_label.squeeze())
 
 

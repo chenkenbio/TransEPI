@@ -59,11 +59,13 @@ def model_summary(model):
         total_param += num_p
     return {'total_param': total_param, 'trainable_param': trainable_param}
 
+
 def predict(model: nn.Module, data_loader: DataLoader, device=torch.device('cuda')):
     model.eval()
     result, true_label = None, None
-    for feats, dists, enh_idxs, prom_idxs, labels in data_loader:
-        feats, dists, labels = feats.to(device), dists.to(device), labels.to(device)
+    for feats, _, enh_idxs, prom_idxs, labels in data_loader:
+        feats, labels = feats.to(device), labels.to(device)
+        # enh_idxs, prom_idxs = enh_idxs.to(device), prom_idxs.to(device)
         pred = model(feats, enh_idx=enh_idxs, prom_idx=prom_idxs)
         pred = pred.detach().cpu().numpy()
         labels = labels.detach().cpu().numpy()
