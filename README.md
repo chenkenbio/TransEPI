@@ -1,6 +1,6 @@
 # TransEPI: Capturing large genomic contexts for accurately predicting enhancer-promoter interactions
 
-The codes and datasets for [Capturing large genomic contexts for accurately predicting enhancer-promoter interactions](https://www.biorxiv.org/content/10.1101/2021.09.04.458817v1).
+The codes and datasets for [Capturing large genomic contexts for accurately predicting enhancer-promoter interactions](https://doi.org/10.1093/bib/bbab577).
 
 TransEPI is a Transformer-based model for EPI prediction. 
 This repository contains the scripts, data, and trained models for TransEPI.
@@ -167,21 +167,10 @@ To reproduce the major results shown in the manuscripts, see [dev/run_cv.sh](./d
 # Experimental feature
 Replace `epi_dataset.py` with the `src/epi_variable_dataset.py` to enable TransEPI supporting variable length input
 
-# Questions
-For questions about the datasets and code, please contact [chenkenbio@gmail.com](mailto:chenkenbio@gmail.com) or create an issue.
+# Questions  
+For questions about the datasets and code, please contact [chenkenbio@gmail.com](mailto:chenkenbio@gmail.com) or create an issue.  
 
 # Citation
 
-```
-@article {Chen2021.09.04.458817,
-	author = {Chen, Ken and Zhao, Huiying and Yang, Yuedong},
-	title = {Capturing large genomic contexts for accurately predicting enhancer-promoter interactions},
-	elocation-id = {2021.09.04.458817},
-	year = {2021},
-	doi = {10.1101/2021.09.04.458817},
-	publisher = {Cold Spring Harbor Laboratory},
-	URL = {https://www.biorxiv.org/content/early/2021/09/06/2021.09.04.458817},
-	eprint = {https://www.biorxiv.org/content/early/2021/09/06/2021.09.04.458817.full.pdf},
-	journal = {bioRxiv}
-}
-```
+Ken Chen, Huiying Zhao, Yuedong Yang, Capturing large genomic contexts for accurately predicting enhancer-promoter interactions, Briefings in Bioinformatics, 2022;, bbab577, https://doi.org/10.1093/bib/bbab577  
+
