@@ -203,7 +203,7 @@ class TransEPI(nn.Module):
         base_idx = seq_len * torch.arange(batch_size) # .to(feats.device)
         enh_idx = enh_idx.long().view(batch_size) + base_idx
         prom_idx = prom_idx.long().view(batch_size) + base_idx
-        feats = feats.view(-1, feat_dim)
+        feats = feats.reshape(-1, feat_dim)
         seq_embed = torch.cat((
             feats[enh_idx, :].view(batch_size, -1), 
             feats[prom_idx, :].view(batch_size, -1),
