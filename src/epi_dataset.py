@@ -67,6 +67,12 @@ class EPIDataset(Dataset):
             for cell, assays in self.feats_config.items():
                 for a, fn in assays.items():
                     self.feats_config[cell][a] = os.path.join(location, fn)
+        else:
+            location = os.path.dirname(os.path.abspath(feats_config))
+            for cell, assays in self.feats_config.items():
+                for a, fn in assays.items():
+                    self.feats_config[cell][a] = os.path.join(location, fn)
+
 
         self.feats = dict() # cell_name -> feature_name -> chrom > features (array)
         self.chrom_bins = {
