@@ -69,7 +69,9 @@ class TransEPI(nn.Module):
             **kwargs):
         super(TransEPI, self).__init__()
         
-        if float('.'.join(torch.__version__.split('.')[0:2])) < 1.9:
+        major, minor = torch.__version__.split('.')[:2]
+        assert int(major) >= 1 and int(minor) >= 6, "PyTorch={}, while PyTorch>=1.6 is required"
+        if int(minor) < 9:
             self.transpose = True
         else:
             self.transpose = False
