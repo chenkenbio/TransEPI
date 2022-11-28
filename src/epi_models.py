@@ -70,7 +70,7 @@ class TransEPI(nn.Module):
         super(TransEPI, self).__init__()
         
         major, minor = torch.__version__.split('.')[:2]
-        assert int(major) >= 1 and int(minor) >= 6, "PyTorch={}, while PyTorch>=1.6 is required"
+        assert int(major) >= 1 and int(minor) >= 6, "PyTorch={}, while PyTorch>=1.6 is required".format(torch.__version__)
         if int(minor) < 9:
             self.transpose = True
         else:
